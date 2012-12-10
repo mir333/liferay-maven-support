@@ -14,9 +14,9 @@
 
 package com.liferay.maven.plugins;
 
-import com.liferay.portal.kernel.util.FileUtil;
-
 import java.io.File;
+
+import com.liferay.util.ant.CopyTask;
 
 /**
  * @author Mika Koivisto
@@ -31,7 +31,8 @@ public class PluginDeployerMojo extends AbstractLiferayMojo {
 				"Deploying " + warFileName + " to " +
 					autoDeployDir.getAbsolutePath());
 
-			FileUtil.copyFile(warFile, new File(autoDeployDir, warFileName));
+			CopyTask.copyFile(
+				warFile, autoDeployDir, warFileName, null, true, true);
 		}
 		else {
 			getLog().warn(warFileName + " does not exist");
