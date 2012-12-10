@@ -8,8 +8,9 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.liferay.maven.plugins</groupId>
+	<groupId>eu.ibacz.liferay</groupId>
 	<artifactId>liferay-maven-plugin</artifactId>
+    <version>6.1.1.1</version>
 	<packaging>maven-plugin</packaging>
 	<name>Liferay Maven 2 Plugin</name>
 	<description>Contains goals to manage Liferay plugins.</description>
